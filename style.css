@@ -650,6 +650,25 @@ ul {
   font-size: 0.85rem;
 }
 
+/* ===== BADGES SOBRE MIM ===== */
+.badge-focus {
+  background: rgba(255, 140, 50, 0.12);
+  border-color: rgba(255, 140, 50, 0.22);
+  color: #cc6b16;
+}
+
+.badge-quality {
+  background: rgba(36, 56, 76, 0.10);
+  border-color: rgba(36, 56, 76, 0.16);
+  color: var(--color-primary);
+}
+
+.badge-growth {
+  background: rgba(85, 191, 195, 0.12);
+  border-color: rgba(85, 191, 195, 0.22);
+  color: #2c8d92;
+}
+
 /* TABLET / MENU MOBILE */
 @media (max-width: 768px) {
   .nav {
