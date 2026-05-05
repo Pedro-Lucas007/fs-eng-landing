@@ -59,12 +59,6 @@ ul {
   padding: 72px 0;
 }
 
-.section-title {
-  font-size: 2rem;
-  color: var(--color-primary);
-  margin-bottom: 32px;
-}
-
 .section-heading {
   display: flex;
   align-items: center;
@@ -79,8 +73,9 @@ ul {
   background: var(--color-accent);
 }
 
-.section-heading .section-title {
-  margin-bottom: 0;
+.section-title {
+  font-size: 2rem;
+  color: var(--color-primary);
 }
 
 .highlight {
@@ -146,7 +141,6 @@ ul {
 .logo {
   width: 170px;
   height: auto;
-  display: block;
 }
 
 .menu-toggle {
@@ -169,6 +163,10 @@ ul {
   display: none;
 }
 
+.nav.active {
+  display: flex;
+}
+
 .nav a {
   color: var(--color-primary);
   font-weight: 600;
@@ -184,10 +182,6 @@ ul {
   color: #fff !important;
   padding: 12px 18px;
   border-radius: 999px;
-}
-
-.nav.active {
-  display: flex;
 }
 
 /* HERO */
@@ -317,7 +311,7 @@ ul {
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 24px;
 }
 
 .project-card {
@@ -332,6 +326,10 @@ ul {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.project-card:first-child {
+  border: 2px solid rgba(255, 140, 50, 0.2);
+}
+
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
@@ -339,6 +337,7 @@ ul {
 
 .project-image {
   width: 100%;
+  height: 170px;
   border-radius: 16px 16px 0 0;
   overflow: hidden;
   background: transparent;
@@ -346,24 +345,16 @@ ul {
 
 .project-image img {
   width: 100%;
-  height: 170px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
-  display: block;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-}
-
-.placeholder {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  color: #fff;
-  font-weight: 700;
 }
 
 .project-card h3 {
   color: var(--color-primary);
   margin: 0;
   font-size: 1.25rem;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -403,7 +394,8 @@ ul {
   flex-wrap: wrap;
 }
 
-.project-buttons a {
+.project-buttons a,
+.project-buttons span {
   min-height: 42px;
   padding: 0 16px;
   border-radius: 999px;
@@ -412,27 +404,28 @@ ul {
   justify-content: center;
   font-weight: 700;
   font-size: 0.9rem;
-  transition: all 0.25s ease;
 }
 
-.project-buttons .btn-primary {
-  background: var(--color-accent);
-  color: #fff;
-  box-shadow: var(--shadow-soft);
+.coming-soon {
+  background: rgba(255, 140, 50, 0.12);
+  color: var(--color-accent);
 }
 
-.project-buttons .btn-primary:hover {
-  transform: translateY(-2px);
+.projects-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
-.project-buttons .btn-secondary {
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
-  background: transparent;
+.projects-cta .btn-primary {
+  padding: 14px 32px;
+  font-size: 1rem;
+  border-radius: 999px;
 }
 
-.project-buttons .btn-secondary:hover {
-  background: rgba(36, 56, 76, 0.05);
+.projects-cta .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 140, 50, 0.35);
 }
 
 /* TECHNOLOGIES */
@@ -535,11 +528,28 @@ ul {
   justify-content: center;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
   border: 1px solid var(--color-border);
   color: var(--color-primary);
   font-size: 0.9rem;
   font-weight: 600;
+}
+
+.badge-focus {
+  background: rgba(255, 140, 50, 0.12);
+  border-color: rgba(255, 140, 50, 0.22);
+  color: #cc6b16;
+}
+
+.badge-quality {
+  background: rgba(36, 56, 76, 0.10);
+  border-color: rgba(36, 56, 76, 0.16);
+  color: var(--color-primary);
+}
+
+.badge-growth {
+  background: rgba(85, 191, 195, 0.12);
+  border-color: rgba(85, 191, 195, 0.22);
+  color: #2c8d92;
 }
 
 /* CONTACT */
@@ -621,8 +631,6 @@ ul {
   border: 1px solid rgba(36, 56, 76, 0.12);
   background: rgba(255, 255, 255, 0.65);
   color: var(--color-primary);
-  font-size: 0.78rem;
-  font-weight: 700;
   transition: all 0.25s ease;
 }
 
@@ -635,39 +643,6 @@ ul {
   transform: translateY(-2px);
   background: #ffffff;
   box-shadow: 0 10px 22px rgba(36, 56, 76, 0.10);
-}
-
-/* ===== STATUS EM BREVE ===== */
-.coming-soon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 40px;
-  padding: 0 16px;
-  border-radius: 999px;
-  background: rgba(255, 140, 50, 0.12);
-  color: var(--color-accent);
-  font-weight: 600;
-  font-size: 0.85rem;
-}
-
-/* ===== BADGES SOBRE MIM ===== */
-.badge-focus {
-  background: rgba(255, 140, 50, 0.12);
-  border-color: rgba(255, 140, 50, 0.22);
-  color: #cc6b16;
-}
-
-.badge-quality {
-  background: rgba(36, 56, 76, 0.10);
-  border-color: rgba(36, 56, 76, 0.16);
-  color: var(--color-primary);
-}
-
-.badge-growth {
-  background: rgba(85, 191, 195, 0.12);
-  border-color: rgba(85, 191, 195, 0.22);
-  color: #2c8d92;
 }
 
 /* TABLET / MENU MOBILE */
@@ -825,6 +800,53 @@ ul {
     background: rgba(255, 255, 255, 0.45);
   }
 
+  .project-card {
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .project-image {
+    height: 150px;
+  }
+
+  .project-image img {
+    object-position: 85% center;
+  }
+
+  .project-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .project-card p {
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+
+  .project-tech {
+    gap: 6px;
+  }
+
+  .project-tech span {
+    font-size: 0.72rem;
+    padding: 4px 9px;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-buttons a,
+  .project-buttons span {
+    width: 100%;
+    min-height: 40px;
+    font-size: 0.88rem;
+  }
+
+  .projects-cta {
+    margin-top: 32px;
+  }
+
   .footer-content {
     flex-direction: column;
     justify-content: center;
@@ -834,68 +856,4 @@ ul {
   .footer-socials {
     justify-content: center;
   }
-
-  .project-card {
-    padding: 16px;
-  }
-
-  .project-buttons {
-    flex-direction: column;
-  }
-
-  .project-buttons a {
-    width: 100%;
-  }
-
-  .project-card {
-  padding: 14px;
-  gap: 12px;
-}
-
-.project-image {
-  height: 150px;
-  border-radius: 16px 16px 0 0;
-  overflow: hidden;
-  background: transparent;
-  padding: 0;
-}
-
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 85% center;
-  display: block;
-}
-
-.project-card h3 {
-  font-size: 1.05rem;
-}
-
-.project-card p {
-  font-size: 0.92rem;
-  line-height: 1.45;
-}
-
-.project-tech {
-  gap: 6px;
-}
-
-.project-tech span {
-  font-size: 0.72rem;
-  padding: 4px 9px;
-}
-
-.project-buttons {
-  gap: 10px;
-}
-
-.project-buttons a {
-  min-height: 40px;
-  font-size: 0.88rem;
-}
-}
-
-.project-card:first-child {
-  border: 2px solid rgba(255, 140, 50, 0.2);
 }

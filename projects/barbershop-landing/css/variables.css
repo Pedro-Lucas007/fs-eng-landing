@@ -1,0 +1,13 @@
+:root {
+  --primary: #24384C;
+  --accent: #FF8C32;
+  --support: #55BFC3;
+  --bg: #E9EDF2;
+  --white: #FFFFFF;
+  --dark: #0F1012;
+
+  --font-title: 'Playfair Display', serif;
+  --font-main: 'Poppins', sans-serif;
+
+  --transition: all 0.3s ease;
+}

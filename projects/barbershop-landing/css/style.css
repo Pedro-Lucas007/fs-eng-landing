@@ -1,0 +1,62 @@
+@import url('./variables.css');
+@import url('./components/header.css');
+@import url('./components/hero.css');
+@import url('./components/services.css');
+@import url('./components/barbers.css');
+@import url('./components/plans.css');
+@import url('./components/booking.css');
+@import url('./components/contact.css');
+@import url('./responsive.css');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: var(--font-main);
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* BOTÕES */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--dark);
+}

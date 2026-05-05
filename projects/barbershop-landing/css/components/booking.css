@@ -1,0 +1,102 @@
+.booking {
+  padding: 120px 0;
+  background:
+    radial-gradient(circle at 15% 40%, rgba(255,140,50,0.10), transparent 30%),
+    #0f1012;
+}
+
+.booking-container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.booking-content h2 {
+  font-family: var(--font-title);
+  font-size: clamp(40px, 4vw, 58px);
+  line-height: 1.08;
+  margin: 16px 0 24px;
+}
+
+.booking-content p {
+  color: rgba(255,255,255,0.72);
+  line-height: 1.8;
+  max-width: 520px;
+}
+
+.booking-info {
+  display: grid;
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.booking-info div {
+  padding: 20px;
+  border-left: 3px solid var(--accent);
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+}
+
+booking-info strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.booking-info span {
+  color: rgba(255,255,255,0.65);
+}
+
+.booking-form {
+  padding: 38px;
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.015)
+  );
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  background-color: #111214;
+  color: var(--white);
+  font-family: var(--font-main);
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--accent);
+}
+
+.booking-form .btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+}

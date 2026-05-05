@@ -1,0 +1,110 @@
+.plans {
+  padding: 110px 0;
+  background:
+    radial-gradient(circle at center, rgba(255, 140, 50, 0.09), transparent 32%),
+    #18191c;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.plan-card {
+  position: relative;
+  padding: 38px 30px;
+  min-height: 470px;
+  background: linear-gradient(145deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  transition: var(--transition);
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 140, 50, 0.45);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.plan-featured {
+  min-height: 520px;
+  border-color: rgba(255, 140, 50, 0.45);
+  box-shadow: 0 25px 80px rgba(255, 140, 50, 0.10);
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.plan-featured::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 22px;
+  background: linear-gradient(
+    120deg,
+    rgba(255,140,50,0.6),
+    transparent,
+    rgba(255,140,50,0.6)
+  );
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.plan-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 14px;
+  background-color: var(--accent);
+  color: var(--dark);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.plan-name {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+
+.plan-card h3 {
+  font-family: var(--font-title);
+  font-size: 46px;
+  margin-bottom: 16px;
+}
+
+.plan-card h3 span {
+  font-family: var(--font-main);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.plan-card p {
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.7;
+  margin-bottom: 26px;
+}
+
+.plan-card ul {
+  list-style: none;
+  margin-bottom: 32px;
+}
+
+.plan-card li {
+  padding: 10px 0;
+  color: rgba(255, 255, 255, 0.78);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.plan-card li::before {
+  content: "✓";
+  color: var(--accent);
+  margin-right: 10px;
+}

@@ -1,0 +1,160 @@
+.services {
+  padding: 100px 0;
+  background-color: #18191c;
+}
+
+.section-heading {
+  max-width: 650px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.section-subtitle {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.section-heading h2 {
+  font-family: var(--font-title);
+  font-size: clamp(42px, 4vw, 60px);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin: 0 auto 80px;
+  text-align: center;
+}
+
+.section-heading::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  display: block;
+  margin: 20px auto 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  position: relative;
+  min-height: 280px;
+  padding: 36px 28px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.02),
+    rgba(255,255,255,0.01)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+
+  text-align: center;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 140, 50, 0.4),
+    transparent
+  );
+
+ -webkit-mask: 
+  linear-gradient(#000 0 0) content-box, 
+  linear-gradient(#000 0 0);
+
+mask: 
+  linear-gradient(#000 0 0) content-box, 
+  linear-gradient(#000 0 0);
+
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(255, 140, 50, 0.4);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 140, 50, 0.18),
+    rgba(255, 140, 50, 0.05)
+  );
+
+  border: 1px solid rgba(255, 140, 50, 0.35);
+  border-radius: 18px;
+
+  transition: var(--transition);
+}
+
+.service-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+  background: rgba(255, 140, 50, 0.2);
+}
+
+.service-icon img {
+  width: 28px;
+  height: 28px;
+}
+
+.service-card h3 {
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.service-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.services,
+.barbers {
+  background:
+    radial-gradient(circle at top, rgba(255,140,50,0.08), transparent 30%),
+    #0f1012;
+}
