@@ -1,0 +1,143 @@
+.about {
+  background-color: var(--color-cream);
+  padding: 40px 0 80px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 35px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 620px;
+  mix-blend-mode: multiply;
+  transform: translateX(-20px);
+}
+
+.about-text h2 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: var(--color-black);
+  font-weight: 900;
+}
+
+.about-text h2 span {
+  color: var(--color-red);
+}
+
+.about-text p {
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 34px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.feature img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  filter: brightness(0);
+  flex-shrink: 0;
+}
+
+.feature h4 {
+  color: #1a1a1a;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.feature p {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .about {
+    padding: 40px 0 60px;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+    object-fit: contain;
+    transform: none;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.05;
+    margin-bottom: 20px;
+  }
+
+  .about-text p {
+    max-width: 320px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+  }
+
+  .about-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 18px;
+  }
+
+  .feature {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .feature h4 {
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feature p {
+    max-width: 150px;
+  }
+}

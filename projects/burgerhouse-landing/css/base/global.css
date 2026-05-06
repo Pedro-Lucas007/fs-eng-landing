@@ -1,0 +1,27 @@
+:root {
+  --color-dark: #211b19;
+  --color-red: #8f1714;
+  --color-yellow: #f5b51b;
+  --color-orange: #e75b25;
+  --color-cream: #f4efe4;
+  --color-white: #ffffff;
+  --color-black: #111111;
+  --color-muted: #d8d0c4;
+
+  --container-width: 1200px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.container {
+  width: 90%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
