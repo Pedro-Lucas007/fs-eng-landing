@@ -320,9 +320,13 @@ ul {
   border-radius: var(--radius-md);
   padding: 18px;
   box-shadow: var(--shadow-soft);
+
   display: flex;
   flex-direction: column;
+
+  height: 100%;
   gap: 14px;
+
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -371,6 +375,8 @@ ul {
   flex-wrap: wrap;
   gap: 8px;
   justify-content: center;
+
+  margin-top: auto;
 }
 
 .project-tech span {
@@ -389,7 +395,7 @@ ul {
 .project-buttons {
   display: flex;
   gap: 12px;
-  margin-top: 6px;
+  margin-top: 8px;
   justify-content: center;
   flex-wrap: wrap;
 }
