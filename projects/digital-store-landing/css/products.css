@@ -1,0 +1,220 @@
+.products {
+    padding: 90px 0 120px;
+    background: var(--color-white);
+    color: var(--color-bg);
+}
+
+.section-header {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-badge {
+    color: var(--color-pink);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-header h2 {
+    margin-top: 10px;
+    font-family: var(--font-title);
+    font-size: 2.7rem;
+    font-weight: 900;
+}
+
+.section-header p {
+    margin-top: 14px;
+    color: #4b5565;
+    line-height: 1.7;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px;
+}
+
+.product-card {
+    min-height: 330px;
+    padding: 0 16px 24px;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #eceef4;
+    box-shadow: 0 16px 45px rgba(7, 11, 26, 0.08);
+    text-align: center;
+    position: relative;
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 70px rgba(123, 44, 255, 0.18);
+}
+
+.product-image {
+    height: 145px;
+    margin: 0 -16px 34px;
+    border-radius: 18px 18px 0 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+/* FUNDOS INDIVIDUAIS */
+
+.instagram .product-image {
+    background: linear-gradient(135deg, #ffc2d7, #ffecf3);
+}
+
+.convite .product-image {
+    background: linear-gradient(135deg, #ead7ff, #fff3fb);
+}
+
+.cardapio .product-image {
+    background: linear-gradient(135deg, #ffd600, #fff3a3);
+}
+
+.identidade .product-image {
+    background: linear-gradient(135deg, #b8f3ff, #e9f8ff);
+}
+
+.template .product-image {
+    background: linear-gradient(135deg, #bdefff, #e5fff8);
+}
+
+.flyer .product-image {
+    background: linear-gradient(135deg, #d9b4ff, #ffe3f4);
+}
+
+/* AJUSTE FINO DAS IMAGENS */
+
+.instagram .product-image img {
+    width: 115px;
+    height: 115px;
+}
+
+.convite .product-image img {
+    width: 130px;
+    height: 130px;
+}
+
+.cardapio .product-image img {
+    width: 135px;
+    height: 135px;
+}
+
+.identidade .product-image img {
+    width: 135px;
+    height: 135px;
+}
+
+.template .product-image img {
+    width: 135px;
+    height: 135px;
+}
+
+.flyer .product-image img {
+    width: 130px;
+    height: 130px;
+}
+
+/* ÍCONES */
+
+.product-icon {
+    width: 48px;
+    height: 48px;
+
+    margin: -58px auto 22px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    position: relative;
+    z-index: 2;
+
+    box-shadow: 0 12px 30px rgba(7, 11, 26, 0.18);
+}
+
+.product-icon img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.instagram .product-icon {
+    background: linear-gradient(135deg, #ff1e8a, #ff5f9e);
+}
+
+.convite .product-icon {
+    background: linear-gradient(135deg, #7b2cff, #a958ff);
+}
+
+.cardapio .product-icon {
+    background: linear-gradient(135deg, #ffd600, #ff9f00);
+}
+
+.identidade .product-icon {
+    background: linear-gradient(135deg, #00d1ff, #0077ff);
+}
+
+.template .product-icon {
+    background: linear-gradient(135deg, #00d97e, #00b8ff);
+}
+
+.flyer .product-icon {
+    background: linear-gradient(135deg, #7b2cff, #ff1e8a);
+}
+
+.product-card h3 {
+    font-family: var(--font-title);
+    font-size: 0.98rem;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #4f5b6f;
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+
+.products-action {
+    margin-top: 34px;
+    text-align: center;
+}
+
+.products-button {
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(135deg, var(--color-pink), var(--color-purple));
+
+    color: var(--color-white);
+
+    font-weight: 800;
+
+    box-shadow: 0 18px 45px rgba(255, 30, 138, 0.28);
+
+    transition: var(--transition);
+}
+
+.products-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 60px rgba(255, 30, 138, 0.42);
+}

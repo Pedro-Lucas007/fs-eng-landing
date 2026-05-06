@@ -1,0 +1,79 @@
+/* ========================= */
+/* BENEFITS */
+/* ========================= */
+
+.benefits {
+    padding: 70px 0;
+    background: #ffd400;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefits-content {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+/* TITLE */
+
+.benefits-title h2 {
+    font-family: var(--font-title);
+    font-size: 3rem;
+    line-height: 1.05;
+    font-weight: 900;
+    color: #070b1a;
+}
+
+.benefits-title span {
+    display: block;
+    color: var(--color-pink);
+}
+
+/* LIST */
+
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* ITEM */
+
+.benefit-item {
+    position: relative;
+    padding-left: 26px;
+}
+
+.benefit-item::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: rgba(7, 11, 26, 0.15);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.benefit-item img {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+}
+
+.benefit-item h3 {
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #070b1a;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.benefit-item p {
+    color: rgba(7, 11, 26, 0.75);
+    line-height: 1.7;
+    font-size: 0.92rem;
+}

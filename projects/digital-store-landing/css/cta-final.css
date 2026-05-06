@@ -1,0 +1,107 @@
+/* ========================= */
+/* CTA FINAL */
+/* ========================= */
+
+.cta-final {
+    padding: 140px 0;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(255, 30, 138, 0.25),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(123, 44, 255, 0.28),
+            transparent 36%
+        ),
+        linear-gradient(
+            135deg,
+            #050816,
+            #070b1f,
+            #0b1028
+        );
+}
+
+.cta-final::before {
+    content: "";
+    width: 420px;
+    height: 420px;
+    position: absolute;
+    top: -120px;
+    left: -120px;
+    background: rgba(255, 30, 138, 0.25);
+    border-radius: 50%;
+    filter: blur(140px);
+}
+
+.cta-final::after {
+    content: "";
+    width: 420px;
+    height: 420px;
+    position: absolute;
+    right: -120px;
+    bottom: -140px;
+    background: rgba(123, 44, 255, 0.25);
+    border-radius: 50%;
+    filter: blur(140px);
+}
+
+.cta-content {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    color: var(--color-white);
+}
+
+.cta-badge {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.cta-content h2 {
+    margin: 28px 0 24px;
+    font-family: var(--font-title);
+    font-size: 3.2rem;
+    line-height: 1.12;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.cta-content p {
+    max-width: 760px;
+    margin: 0 auto 42px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 42px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #00e7a9, #00cfff);
+    color: #04111f;
+    font-size: 1rem;
+    font-weight: 800;
+    box-shadow: 0 20px 50px rgba(0, 231, 169, 0.28);
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 70px rgba(0, 231, 169, 0.42);
+}

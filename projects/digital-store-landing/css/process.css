@@ -1,0 +1,182 @@
+/* ========================= */
+/* PROCESS */
+/* ========================= */
+
+.process {
+    padding: 110px 0;
+    background: #ffffff;
+    position: relative;
+}
+
+/* HEADER */
+
+.process-header {
+    max-width: 760px;
+    margin: 0 auto 70px;
+    text-align: center;
+}
+
+.process-header h2 {
+    margin-top: 14px;
+    font-family: var(--font-title);
+    font-size: 3rem;
+    font-weight: 900;
+    color: #070b1a;
+}
+
+.process-header p {
+    margin-top: 18px;
+    color: #5b6475;
+    line-height: 1.8;
+}
+
+/* GRID */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    position: relative;
+}
+
+/* CARD */
+
+.process-card {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+/* DOTTED LINE */
+
+.process-card::after {
+    content: "";
+
+    width: 80px;
+    height: 2px;
+
+    position: absolute;
+    top: 54px;
+    right: -54px;
+
+    background-image:
+        linear-gradient(
+            to right,
+            #070b1a 33%,
+            rgba(255,255,255,0) 0%
+        );
+
+    background-position: bottom;
+    background-size: 12px 2px;
+    background-repeat: repeat-x;
+
+    opacity: 0.35;
+}
+
+.process-card:last-child::after {
+    display: none;
+}
+
+/* ICON */
+
+.process-icon {
+    width: 110px;
+    height: 110px;
+
+    margin: 0 auto 26px;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.process-icon img {
+    width: 42px;
+    height: 42px;
+}
+
+/* NUMBER */
+
+.process-icon span {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    position: absolute;
+    top: -2px;
+    left: -2px;
+
+    background: #070b1a;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-title);
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+/* COLORS */
+
+.process-icon.pink {
+    background: linear-gradient(
+        135deg,
+        #ff1e8a,
+        #ff4db2
+    );
+}
+
+.process-icon.blue {
+    background: linear-gradient(
+        135deg,
+        #00d1ff,
+        #00b7ff
+    );
+}
+
+.process-icon.purple {
+    background: linear-gradient(
+        135deg,
+        #7b2cff,
+        #9b5cff
+    );
+}
+
+.process-icon.yellow {
+    background: linear-gradient(
+        135deg,
+        #ffd400,
+        #ffbf00
+    );
+}
+
+/* TITLES */
+
+.process-card h3 {
+    margin-bottom: 14px;
+
+    font-family: var(--font-title);
+    font-size: 1.15rem;
+    line-height: 1.3;
+
+    color: #070b1a;
+}
+
+/* TEXT */
+
+.process-card p {
+    max-width: 240px;
+    margin: 0 auto;
+
+    color: #5b6475;
+
+    line-height: 1.7;
+    font-size: 0.92rem;
+}

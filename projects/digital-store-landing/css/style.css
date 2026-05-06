@@ -1,0 +1,94 @@
+@import url("./variables.css");
+@import url("./header.css");
+@import url("./hero.css");
+@import url("./products.css");
+@import url("./benefits.css");
+@import url("./process.css");
+@import url("./testimonials.css");
+@import url("./cta-final.css");
+@import url("./footer.css");
+@import url("./responsive.css");
+
+/* RESET GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-body);
+    background: var(--color-bg);
+    color: var(--color-white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+/* ========================= */
+/* SCROLL EFFECTS */
+/* ========================= */
+
+.header.scrolled {
+    background: rgba(5, 8, 22, 0.92);
+    backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* ACTIVE MENU */
+
+.navbar a.active {
+    color: var(--color-blue);
+}
+
+/* REVEAL */
+
+.product-card,
+.benefit-item,
+.process-card,
+.testimonial-card,
+.cta-content {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.product-card.show,
+.benefit-item.show,
+.process-card.show,
+.testimonial-card.show,
+.cta-content.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
